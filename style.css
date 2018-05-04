@@ -1,11 +1,61 @@
+body {
+  background-color: lightgrey;
+}
 .square {
   width: 50px;
   float: left;
-  padding-bottom: 50px;
+  height: 50px;
   background: white;
-  border: solid black 0.2px;
+  border: solid grey 0.1px;
 }
 
 .row {
   clear: both;
 }
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* .red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+} */
+
+/* .orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+} */
