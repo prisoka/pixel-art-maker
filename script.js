@@ -1,3 +1,5 @@
+let gridSize = 20
+
 // 2. Create a small palette of two colors (e.g. red and blue) below the canvas using more div tags.
 let palleteOfColors = ["red", "orange", "yellow", "green", "blue", "purple", "brown", "gray", "black", "white"];
 let brushColor = palleteOfColors[0];
@@ -8,12 +10,37 @@ window.onload = function(){
   document.body.style.cursor = "copy"
 
 // 6. Expand the palette with a brush color indicator.
+  createGrid(gridSize);
   addColorsToPallete(palleteOfColors);
 }
 
 // 1. Create a small, 2x2 grid canvas made up of white, square div tags with a border.
-// 1a. Add an event listener to each div so when clicked the background turns red.
+function createGrid(gridSize){
+  // Creating a single square (use style.css to work):
+  // let row = document.createElement("div");
+  // row.classList.add("row");
+  // let square = document.createElement("div");
+  // square.classList.add("square");
+  // square.onclick = squareClicked;
+  //
+  // document.getElementById("my-grid").appendChild(row);
+  // row.appendChild(square);
+  for (let j=0; j < gridSize; j++){
+    let row = document.createElement("div");
+    row.classList.add("row");
 
+    for (let x=0; x < gridSize; x++){
+      let square = document.createElement("div");
+      square.classList.add("square");
+      square.onclick = squareClicked;
+      row.appendChild(square);
+    }
+
+    document.getElementById("my-grid").appendChild(row);
+  }
+}
+
+// 1a. Add an event listener to each div so when clicked the background turns red.
 function squareClicked(event){
   let square = event.target;
   square.style.backgroundColor = brushColor;
@@ -30,6 +57,19 @@ function addColorsToPallete(palleteOfColors){
     parentDiv.appendChild(color);
   })
 }
+
+// Same function addColorsToPallete(), using for...loop:
+// function addColorsToPallete(palleteOfColors){
+//   for (let i=0; i<palleteOfColors.length; i++){
+//     let colorName = palleteOfColors[i];
+//     let color = document.createElement("div");
+//     color.className = "color";
+//     color.style.backgroundColor = colorName;
+//     color.onclick = clickColor;
+//     let parentDiv = document.getElementById("pallete");
+//     parentDiv.appendChild(color);
+//   }
+// }
 
 // 3. Add an event listener to these div tags so when clicked the brush color is saved.
 function clickColor(e){
