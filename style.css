@@ -1,5 +1,12 @@
 body {
   background-color: lightgrey;
+  cursor: URL(images/paint-brush.png);
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .square {
   width: 30px;
@@ -16,6 +23,7 @@ body {
 .color {
   width: 30px;
   height: 30px;
+  margin: 10px;
   border-radius: 50%;
   display: inline-block;
 }

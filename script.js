@@ -7,7 +7,7 @@ let brushColor = palleteOfColors[0];
 // palleteOfColors.push("orange", "yellow", "green", "blue", "purple", "brown", "gray", "black", "white");
 
 window.onload = function(){
-  document.body.style.cursor = "copy"
+  document.body.style.cursor = "paint-brush.png";
 
 // 6. Expand the palette with a brush color indicator.
   createGrid(gridSize);
